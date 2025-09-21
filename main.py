@@ -1,8 +1,8 @@
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 import random
-
-TOKEN = "8486194098:AAExFECDINRSzAkFVC8dbdw6dCmD4H4KVhY"
+import os
+TOKEN = os.environ.get("TOKEN")
 
 # Store ongoing games
 games = {}  # key: user_id, value: {'number': 42, 'attempts': 0}
