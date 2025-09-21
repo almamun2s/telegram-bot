@@ -4,6 +4,11 @@ import random
 import os
 TOKEN = os.environ.get("TOKEN")
 
+print("TOKEN =", os.environ.get("TOKEN"))  # just for debug
+
+if TOKEN is None:
+    TOKEN = "8486194098:AAExFECDINRSzAkFVC8dbdw6dCmD4H4KVhY";
+
 # Store ongoing games
 games = {}  # key: user_id, value: {'number': 42, 'attempts': 0}
 
